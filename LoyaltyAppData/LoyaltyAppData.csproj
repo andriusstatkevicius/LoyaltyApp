@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;netstandard2.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210320173803_Init.cs" />
+    <Compile Remove="Migrations\20210320173803_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210320174314_Init.cs" />
+    <Compile Remove="Migrations\20210320174314_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210320184019_Init.cs" />
+    <Compile Remove="Migrations\20210320184019_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210320191452_Init.cs" />
+    <Compile Remove="Migrations\20210320191452_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210320192823_Init.cs" />
+    <Compile Remove="Migrations\20210320192823_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210320193328_Init.cs" />
+    <Compile Remove="Migrations\20210320193328_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321113404_Init.cs" />
+    <Compile Remove="Migrations\20210321113404_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321114521_Init.cs" />
+    <Compile Remove="Migrations\20210321114521_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321120027_Init.cs" />
+    <Compile Remove="Migrations\20210321120027_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321120350_Init.cs" />
+    <Compile Remove="Migrations\20210321120350_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321123329_Init.cs" />
+    <Compile Remove="Migrations\20210321123329_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321124218_Init.cs" />
+    <Compile Remove="Migrations\20210321124218_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321130847_Init.cs" />
+    <Compile Remove="Migrations\20210321130847_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321131530_Init.cs" />
+    <Compile Remove="Migrations\20210321131530_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321132535_Init.cs" />
+    <Compile Remove="Migrations\20210321132535_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321133311_Init.cs" />
+    <Compile Remove="Migrations\20210321133311_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321133841_Init.cs" />
+    <Compile Remove="Migrations\20210321133841_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321134036_Init.cs" />
+    <Compile Remove="Migrations\20210321134036_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321134420_Init.cs" />
+    <Compile Remove="Migrations\20210321134420_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321134755_Init.cs" />
+    <Compile Remove="Migrations\20210321134755_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321141918_Init.cs" />
+    <Compile Remove="Migrations\20210321141918_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321142517_Init.cs" />
+    <Compile Remove="Migrations\20210321142517_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321143933_Init.cs" />
+    <Compile Remove="Migrations\20210321143933_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321144341_Init.cs" />
+    <Compile Remove="Migrations\20210321144341_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321144937_Init.cs" />
+    <Compile Remove="Migrations\20210321144937_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321145906_Init.cs" />
+    <Compile Remove="Migrations\20210321145906_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321150703_Init.cs" />
+    <Compile Remove="Migrations\20210321150703_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321151647_Init.cs" />
+    <Compile Remove="Migrations\20210321151647_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321151735_Init.cs" />
+    <Compile Remove="Migrations\20210321151735_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321155125_Init.cs" />
+    <Compile Remove="Migrations\20210321155125_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321161212_Init.cs" />
+    <Compile Remove="Migrations\20210321161212_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321162347_Init.cs" />
+    <Compile Remove="Migrations\20210321162347_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321164252_Init.cs" />
+    <Compile Remove="Migrations\20210321164252_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321170106_Init.cs" />
+    <Compile Remove="Migrations\20210321170106_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321183300_Init.cs" />
+    <Compile Remove="Migrations\20210321183300_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321185612_Init.cs" />
+    <Compile Remove="Migrations\20210321185612_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321191148_Init.cs" />
+    <Compile Remove="Migrations\20210321191148_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321191558_Init.cs" />
+    <Compile Remove="Migrations\20210321191558_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210321192158_Init.cs" />
+    <Compile Remove="Migrations\20210321192158_Init.Designer.cs" />
+    <Compile Remove="Migrations\20210322173700_AccessUserAdded.cs" />
+    <Compile Remove="Migrations\20210322173700_AccessUserAdded.Designer.cs" />
+    <Compile Remove="Migrations\20210322180833_AccessUserAdded.cs" />
+    <Compile Remove="Migrations\20210322180833_AccessUserAdded.Designer.cs" />
+    <Compile Remove="Migrations\20210322181150_AccessUserAdded.cs" />
+    <Compile Remove="Migrations\20210322181150_AccessUserAdded.Designer.cs" />
+    <Compile Remove="Migrations\20210322181237_AccessUserAdded.cs" />
+    <Compile Remove="Migrations\20210322181237_AccessUserAdded.Designer.cs" />
+    <Compile Remove="Migrations\20210322181436_AccessUserAdded.cs" />
+    <Compile Remove="Migrations\20210322181436_AccessUserAdded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoyaltyLibrary\LoyaltyLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
