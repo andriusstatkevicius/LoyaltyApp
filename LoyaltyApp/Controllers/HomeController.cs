@@ -28,7 +28,6 @@ namespace LoyaltyApp.Controllers
 
             if (result?.Succeeded == true)
             {
-                // TODO: Getting a nasty error here (could not figure out what's  the issue yet)
                 if (accessUser.IsAbleToIssue)
                     await _userManager.AddToRoleAsync(accessUser, "Issuer");
 
@@ -50,7 +49,12 @@ namespace LoyaltyApp.Controllers
             if (user != null && await _userManager.CheckPasswordAsync(user, accessUser.Password))
             {
                 var identity = new ClaimsIdentity("cookies");
-                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.Id));
+
+                var isIssuer = await _userManager.IsInRoleAsync(user, "Issuer");
+                var isRecorder = await _userManager.IsInRoleAsync(user, "Recorder");
+
+                identity.AddClaim(new Claim("Issuer", isIssuer.ToString()));
+                identity.AddClaim(new Claim("Recorder", isRecorder.ToString()));
                 identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
 
                 await HttpContext.SignInAsync("cookies", new ClaimsPrincipal(identity));
