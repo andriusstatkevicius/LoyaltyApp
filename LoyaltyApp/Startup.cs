@@ -8,12 +8,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
+using System;
 using System.Reflection;
 
 namespace LoyaltyApp
 {
     public class Startup
     {
+        private string identityContext => Environment.GetEnvironmentVariable("IdentityContext");
+        private string loyaltyAppContext => Environment.GetEnvironmentVariable("LoyaltyAppContext");
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,20 +30,17 @@ namespace LoyaltyApp
         {
             services.AddControllersWithViews(o => o.Filters.Add(new AuthorizeFilter()));
 
-            services.AddDbContext<AccessUserDBContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("IdentityContext"),
+            services.AddDbContext<AccessUserDBContext>(opt => opt.UseSqlServer(identityContext,
                                                        sql => sql.MigrationsAssembly(typeof(Startup)
                                                                  .GetTypeInfo().Assembly.GetName().Name)));
 
             services.AddIdentityCore<AccessUser>().AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<AccessUserDBContext>();
 
-            services.AddIdentityCore<AccessUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<AccessUserDBContext>();
-
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
-            services.AddDbContext<LoyaltyAppContext>(option =>
-                option.UseSqlServer(Configuration.GetConnectionString("LoyaltyAppContext")));
+            services.AddDbContext<LoyaltyAppContext>(option => option.UseSqlServer(loyaltyAppContext));
 
             services.AddAuthentication("cookies")
                     .AddCookie("cookies",
@@ -64,10 +65,10 @@ namespace LoyaltyApp
             }
             else
             {
-                app.UseExceptionHandler();
+                app.UseExceptionHandler("/Error");
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

@@ -10,6 +10,8 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["LoyaltyApp/LoyaltyApp.csproj", "LoyaltyApp/"]
+COPY ["LoyaltyAppData/LoyaltyAppData.csproj", "LoyaltyAppData/"]
+COPY ["LoyaltyLibrary/LoyaltyLibrary.csproj", "LoyaltyLibrary/"]
 RUN dotnet restore "LoyaltyApp/LoyaltyApp.csproj"
 COPY . .
 WORKDIR "/src/LoyaltyApp"
